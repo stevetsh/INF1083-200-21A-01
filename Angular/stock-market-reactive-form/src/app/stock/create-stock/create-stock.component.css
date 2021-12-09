@@ -1,0 +1,27 @@
+.stock-name .ng-valid,
+/* .stock-name .ng-pristine, */
+/* .stock-nname .ng-untouched, */
+
+.stock-code .ng-valid,
+/* .stock-code .ng-pristine, */
+/* .stock-code .ng-untouched, */
+
+.stock-price .ng-valid
+/* .stock-price .ng-pristine, */
+/* .stock-price .ng-untouched */ {
+  background-color: rgb(210, 238, 210);
+}
+
+.stock-name .ng-invalid,
+/* .stock-name .ng-dirty, */
+/* .stock-name .ng-touched, */
+
+.stock-code .ng-invalid,
+/* .stock-code .ng-dirty, */
+/* .stock-price .ng-touched, */
+
+.stock-price .ng-invalid
+/* .stock-price .ng-dirty, */
+/* .stock-price .ng-touched */ {
+  background-color: pink;
+}
