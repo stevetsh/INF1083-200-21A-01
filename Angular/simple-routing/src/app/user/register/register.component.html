@@ -1,0 +1,54 @@
+<h3>{{message}}</h3>
+<div class="form-group">
+  <form (ngSubmit)="register()">
+    <div class="name">
+      <input type="text"
+             placeholder="Name"
+             required
+             name="name"
+             maxlength="16"
+             minlength="3"
+             #nameField="ngModel"
+             [(ngModel)]="user.name">
+      <div *ngIf="nameField.errors && nameField.errors.required">Name is Mandatory</div>
+    </div>
+    <div class="age">
+      <input type="number"
+             placeholder="Age"
+             required
+             name="age"
+             min="0"
+             maxlength="16"
+             minlength="3"
+             #ageField="ngModel"
+             [(ngModel)]="user.age">
+      <div *ngIf="ageField.errors && ageField.errors.required">Age is Mandatory</div>
+    </div>
+    <div class="user-name">
+      <input type="text"
+             placeholder="Username"
+             required
+             name="username"
+             maxlength="8"
+             minlength="3"
+             #usernameField="ngModel"
+             [(ngModel)]="user.username">
+      <div *ngIf="usernameField.errors && usernameField.errors.required">Username is Mandatory</div>
+    </div>
+    <div class="password">
+      <input type="password"
+             placeholder="Password"
+             required
+             maxlength="8"
+             minlength="3"
+             name="password"
+             #passwordField="ngModel"
+             [(ngModel)]="user.password">
+      <div *ngIf="passwordField.errors && passwordField.errors.required">Password is Mandatory</div>
+    </div>
+    <button type="submit">Register</button>
+  </form>
+
+  <div> {{message}}
+
+</div>
